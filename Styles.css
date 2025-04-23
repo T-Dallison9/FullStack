@@ -1,7 +1,10 @@
-body.bg-beige { /* Background of page*/
-    background-color: #f7ecd5;
-    font-family: 'Georgia', serif;
-  }
+body { /* Background of page*/
+        height: 100%;
+        background-color: #F5DFB8;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
 
   .page-wrapper {
     display: flex;
@@ -25,11 +28,40 @@ body.bg-beige { /* Background of page*/
     text-decoration: none;
     transition: background 0.3s ease;
   }
+
+
   
   #dark-mode-toggle:hover,
   .login-btn:hover {
     background-color: #F1A71E;
     color:#2e1c02
+  }
+
+  body.dark-mode .navbar {
+    background-color: #261E0F;
+    border: 5px solid #000000;
+  }
+
+  body.dark-mode,
+  body.dark-mode html {
+    background-color: #2E2D2B;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .main-box {
+    background-color: #261E0F;
+    border-color: #000000;
+  }
+  
+
+  body.dark-mode footer {
+    background-color: #261E0F;
+  }
+  
+  body.dark-mode a,
+  body.dark-mode .login-btn,
+  body.dark-mode #dark-mode-toggle {
+    color: #F1A71E;
   }
 
   .main-box {
@@ -71,29 +103,31 @@ body.bg-beige { /* Background of page*/
     flex-direction: column;
   }
 
-  html, body {
-    height: 100%;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #F5DFB8;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-  }
 
   main {
     flex: 1;
   }
 
   .navbar {
-    background-color: #fff0d6;
+    background-color: #ffdda3;
+    border: 5px solid #000000
   }
+
+  .navbar-toggler {
+    background-color: #ffdda3;
+    border: 5px solid #000000
+  }
+  
   .nav-link {
     font-size: 1.2rem;
+    color:#2e1c02
   }
 
   .nav-link.active {
     font-weight: bold;
     text-decoration: underline;
+    background-color: #F1A71E;
+    border: 2px solid #000000
   }
 
   footer{
