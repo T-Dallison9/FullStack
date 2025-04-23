@@ -1,0 +1,104 @@
+body.bg-beige { /* Background of page*/
+    background-color: #f7ecd5;
+    font-family: 'Georgia', serif;
+  }
+
+  .page-wrapper {
+    display: flex;
+    min-height: 100vh;
+  }
+  .nav-buttons {
+    display: flex;
+    align-items: right;
+    gap: 1rem;
+  }
+  
+  #dark-mode-toggle,
+  .login-btn {
+    background-color: #2f2418;
+    color: #d4a45f;
+    border: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  #dark-mode-toggle:hover,
+  .login-btn:hover {
+    background-color: #F1A71E;
+    color:#2e1c02
+  }
+
+  .main-box {
+    background-color: #2f2418;
+    border: 2px solid #d4a45f;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+  }
+  
+  
+  @media (max-width: 768px) { /* Mobile stretching */
+    .main-box {
+      padding: 1rem;
+      margin: 1rem;
+    }
+  }
+
+  .side-art { /* Potential side art from designs?*/
+    background-color: #2f2418;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .side-art img {
+    max-width: 100px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+
+  .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5DFB8;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .navbar {
+    background-color: #fff0d6;
+  }
+  .nav-link {
+    font-size: 1.2rem;
+  }
+
+  .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  footer{
+    background-color: #2e1c02;
+    padding: 12px;
+    text-align: left;
+}
+
