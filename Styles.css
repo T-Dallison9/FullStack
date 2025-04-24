@@ -108,6 +108,8 @@ body { /* Background of page*/
     flex: 1;
   }
 
+  
+
   .navbar {
     background-color: #ffdda3;
     border: 5px solid #000000
@@ -179,4 +181,87 @@ body { /* Background of page*/
     padding: 12px;
     text-align: left;
   } 
+  /* === MENU STYLING === */
+
+.menu-section {
+  margin-bottom: 3rem;
+}
+
+.menu-section h3, .menu-section h4 {
+  color: #F1A71E;
+  border-bottom: 1px solid #d4a45f;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.menu-card {
+  background-color: #2f2418;
+  border: 2px solid #d4a45f;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #F5DFB8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  background-color: #3d2f1b;
+}
+
+.menu-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #F1A71E;
+  margin-bottom: 0.5rem;
+}
+
+.menu-card-description {
+  font-size: 1rem;
+  color: #f0e0c0;
+}
+
+.menu-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.menu-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* === DARK MODE SUPPORT FOR MENU === */
+
+body.dark-mode .menu-card {
+  background-color: #261E0F;
+  color: #e6d8bd;
+  border-color: #F1A71E;
+}
+
+body.dark-mode .menu-card:hover {
+  background-color: #1b150d;
+}
+
+body.dark-mode .menu-section h3,
+body.dark-mode .menu-section h4,
+body.dark-mode .menu-card-title {
+  color: #F1A71E;
+}
+
+body.dark-mode .menu-card-description {
+  color: #ccc4aa;
+}
+
+body.dark-mode .menu-list li {
+  color: #e6d8bd;
+}
+
 

@@ -27,7 +27,7 @@ require_once 'includes/login_view.inc.php';
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="Index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="Menu.html">Menu</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Takeaway</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
           </ul>
@@ -86,7 +86,7 @@ require_once 'includes/login_view.inc.php';
       </p>
   </footer>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="Scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Scripts.js"></script>
 </body>
 </html>
