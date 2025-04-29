@@ -23,7 +23,7 @@
             <li class="nav-item"><a class="nav-link" href="/FullStack/Index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="/FullStack/Menu.html">Menu</a></li>
             <li class="nav-item"><a class="nav-link" href="includes/shop.php">Services</a></li>
-            <li class="nav-item"><a class="nav-link active" href="/FullStack/Contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/FullStack/Contact.php">Contact</a></li>
           </ul>
           <div class="nav-buttons">
             <button id="dark-mode-toggle">Dark Mode</button>
@@ -73,6 +73,60 @@
             </div>
           </div>
         </div>
+
+        <hr class="my-5">
+
+        <div class="row">
+        <div class="col-md-12">
+            <div class="form-box">
+            <h3 class="form-title">Leave a Review</h3>
+            <form action="includes/submit-review.php" method="POST">
+                <div class="mb-3">
+                <input type="text" class="form-input" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                <input type="email" class="form-input" name="email" placeholder="Your Email (optional)">
+                </div>
+                <div class="mb-3">
+                <textarea class="form-input" name="message" rows="5" placeholder="Your Review" required></textarea>
+                </div>
+                <div class="text-center">
+                <button type="submit" class="form-btn">Submit Review</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+
+        <div class="row mt-5">
+        <div class="col-md-12">
+            <h4 class="text-center mb-4"> Recent Reviews</h4>
+            <div class="reviews-box">
+            <?php
+            require_once 'includes/dbh.inc.php';
+            try {
+                $stmt = $pdo->prepare("SELECT name, message, created_at FROM reviews ORDER BY created_at DESC LIMIT 5");
+                $stmt->execute();
+                $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                if ($reviews):
+                    foreach ($reviews as $review): ?>
+                        <div class="p-3 mb-3 border rounded">
+                            <strong><?= htmlspecialchars($review['name']) ?></strong> 
+                            <small class="text-muted">on <?= date('j M Y', strtotime($review['created_at'])) ?></small>
+                            <p class="mt-2"><?= nl2br(htmlspecialchars($review['message'])) ?></p>
+                        </div>
+                    <?php endforeach;
+                else:
+                    echo "<p class='text-center'>No reviews yet — be the first to share your thoughts!</p>";
+                endif;
+            } catch (PDOException $e) {
+                echo "<p class='text-danger'>Failed to load reviews.</p>";
+            }
+            ?>
+            </div>
+        </div>
+        </div>
+
 
       </main>
     </div>

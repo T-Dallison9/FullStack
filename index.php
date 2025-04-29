@@ -34,6 +34,9 @@ require_once 'includes/login_view.inc.php';
           <div class="nav-buttons">
             <button id="dark-mode-toggle">Dark Mode</button>
             <a href="includes/login.php" class="login-btn">Login</a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+              <a href="/includes/edit_profile.php" class="login-btn">Edit Profile</a>
+            <?php endif; ?>
           </div>
         </div>
       </div>

@@ -28,11 +28,14 @@
           <li class="nav-item"><a class="nav-link" href="/FullStack/Index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="/FullStack/Menu.html">Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="/shop.php">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="/Contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="/FullStack/Contact.php">Contact</a></li>
         </ul>
         <div class="nav-buttons">
           <button id="dark-mode-toggle">Dark Mode</button>
-          <a href="/includes/login.php" class="login-btn">Login</a>
+          <a href="/FullStack/includes/login.php" class="login-btn">Login</a>
+          <?php if (isset($_SESSION['user_id'])): ?>
+          <a href="/includes/edit_profile.php" class="btn btn-sm btn-outline-light me-2">Edit Profile</a>
+        <?php endif; ?>
         </div>
       </div>
     </div>
