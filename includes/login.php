@@ -8,10 +8,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
 
         // Include necessary files
-        require_once 'includes/dbh.inc.php';    // Database connection
-        require_once 'includes/login_model.inc.php';  // Model functions
-        require_once 'includes/login_contr.inc.php';  // Controller functions
-        require_once 'includes/config_session.inc.php'; // Session handling
+        require_once 'dbh.inc.php';    // Database connection
+        require_once 'login_model.inc.php';  // Model functions
+        require_once 'login_contr.inc.php';  // Controller functions
+        require_once 'config_session.inc.php'; // Session handling
 
         // Initialize error array
         $errors = [];
